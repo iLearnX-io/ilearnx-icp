@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
-import { counter } from "canisters/counter"
+import { ilearnx } from "canisters/ilearnx"
 import logo from "./assets/logo-dark.svg"
 
 export function Intro() {
   const [count, setCount] = useState()
 
   const refreshCounter = async () => {
-    const res = await counter.getValue()
+    const res = await ilearnx.getValue()
     setCount(res.toString())
   }
 
@@ -15,7 +15,7 @@ export function Intro() {
   }, [])
 
   const onIncrementClick = async () => {
-    await counter.increment()
+    await ilearnx.setValueToTen()
     refreshCounter()
   }
 

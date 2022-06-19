@@ -1,12 +1,12 @@
 {
   "canisters": {
-    "counter": {
-      "main": "counter-canister/main.mo",
+    "ilearnx": {
+      "main": "ilearnx/main.mo",
       "type": "motoko"
     },
     "assets": {
       "dependencies": [
-        "counter"
+        "ilearnx"
       ],
       "frontend": {
         "entrypoint": "dist/index.html"
